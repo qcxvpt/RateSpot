@@ -1,0 +1,324 @@
+[
+    {
+        "name": "Kantor 1913 - Warszawa",
+        "lat": 52.2309,
+        "lng": 21.01453,
+        "rates": [
+            {
+                "currency": "EUR",
+                "buy": "4.2400",
+                "sell": "4.3000"
+            },
+            {
+                "currency": "USD",
+                "buy": "3.6210",
+                "sell": "3.6910"
+            }
+        ]
+    },
+    {
+        "name": "Bitcoin ATM Shitcoins.club",
+        "lat": 52.23361191418799,
+        "lng": 21.01003554445016
+    },
+    {
+        "name": "Kantor Krypto Wymiana Kryptowaluty - Cashify",
+        "lat": 52.22117400956089,
+        "lng": 21.015698577818423
+    },
+    {
+        "name": "PlasBit Crypto Exchange",
+        "lat": 52.18062995095901,
+        "lng": 21.023356378486532
+    },
+    {
+        "name": "Coinswap.pl",
+        "lat": 52.23576987038059,
+        "lng": 20.98815867113843
+    },
+    {
+        "name": "Kantor BITCOIN Warszawa - Hotel Marriott",
+        "lat": 52.22776157728751,
+        "lng": 21.003601942301955
+    },
+    {
+        "name": "Kantor Krypto Kotek Warszawa LIM Center",
+        "lat": 52.227309635178074,
+        "lng": 21.003721167432634
+    },
+    {
+        "name": "Kassir obmen - KANTOR KRYPTOWALUT",
+        "lat": 52.226994892028415,
+        "lng": 21.01017250443325
+    },
+    {
+        "name": "Bitcoinwymiana.pl",
+        "lat": 52.23478384350988,
+        "lng": 21.00953861531884
+    },
+    {
+        "name": "Kantor Bitcoin Warszawa",
+        "lat": 52.2351801852045,
+        "lng": 21.009837673401485
+    },
+    {
+        "name": "Kantor X Exchange",
+        "lat": 52.23387779316333,
+        "lng": 20.991881160691264
+    },
+    {
+        "name": "Kantor Argentarii - wymiana walut",
+        "lat": 52.2341931887607,
+        "lng": 20.987160472748098
+    },
+    {
+        "name": "Kantor Grochowska Plac Szembeka",
+        "lat": 52.2422845620364,
+        "lng": 21.10156707000044
+    },
+    {
+        "name": "inter Kantor - Galeria Rondo Wiatraczna",
+        "lat": 52.24469500444384,
+        "lng": 21.086601474125285
+    },
+    {
+        "name": "Kantor -L.E.V.-",
+        "lat": 52.26490928512492,
+        "lng": 21.05020048227213
+    },
+    {
+        "name": "Kantor Tavex Warszawa Centrum Praskie Koneser",
+        "lat": 52.25630963448146,
+        "lng": 21.044567091001902
+    },
+    {
+        "name": "Kantor White Money",
+        "lat": 52.253347256844094,
+        "lng": 21.035944309178813
+    },
+    {
+        "name": "Lemoon Kantor",
+        "lat": 52.252331084693424,
+        "lng": 21.039756718316866
+    },
+    {
+        "name": "Cris Currency Exchange Office",
+        "lat": 52.21996405941683,
+        "lng": 20.980422095734482
+    },
+    {
+        "name": "Polres & Cris",
+        "lat": 52.2140550451556,
+        "lng": 21.022445949160122
+    },
+    {
+        "name": "Kantor Kurs",
+        "lat": 52.21389727608988,
+        "lng": 21.01978519776187
+    },
+    {
+        "name": "Euro Gold",
+        "lat": 52.20959666071422,
+        "lng": 21.020743368839007
+    },
+    {
+        "name": "Joder Sp. z o.o. Kantor wymiany walut",
+        "lat": 52.20680495424477,
+        "lng": 21.023237314896235
+    },
+    {
+        "name": "Panorama. Currency Exchange",
+        "lat": 52.198865399929815,
+        "lng": 21.048029187487344
+    },
+    {
+        "name": "Kantor Apollo",
+        "lat": 52.198865399929815,
+        "lng": 21.048029187487344
+    },
+    {
+        "name": "Kantor Exchange Group - EXG",
+        "lat": 52.18880869447315,
+        "lng": 21.06155380189887
+    },
+    {
+        "name": "Konrad Cielepa Exchange",
+        "lat": 52.1737008638681,
+        "lng": 21.01927949877411
+    },
+    {
+        "name": "Kantor 'Zysk' Warszawa",
+        "lat": 52.24675326772157,
+        "lng": 21.079173095326684
+    },
+    {
+        "name": "Kantor Kaufland Fieldorfa",
+        "lat": 52.1737008638681,
+        "lng": 21.01927949877411
+    },
+    {
+        "name": "Kantor Wymiany Walut",
+        "lat": 52.24182151065396,
+        "lng": 21.101377117730976
+    },
+    {
+        "name": "Kantor Wymiany Walut Atrium Promenada",
+        "lat": 52.23323956721703,
+        "lng": 21.107014716739002
+    },
+    {
+        "name": "Kantor Saska",
+        "lat": 52.233049369640504,
+        "lng": 21.05832088811882
+    },
+    {
+        "name": "Currency Exchange",
+        "lat": 52.29936505058849,
+        "lng": 21.001377899734774
+    },
+    {
+        "name": "Kantor ЕЃodygowa",
+        "lat": 52.29124301990537,
+        "lng": 21.086832767934855
+    },
+    {
+        "name": "Exchange MARYMONT",
+        "lat": 52.272644082458015,
+        "lng": 20.972820451314373
+    },
+    {
+        "name": "Kantor Carrefour Bemowo",
+        "lat": 52.26618770088437,
+        "lng": 20.929593800696125
+    },
+    {
+        "name": "CURRENCY EXCHANGE",
+        "lat": 52.32686669115708,
+        "lng": 20.89931560711485
+    },
+    {
+        "name": "Kantor Extrakantor.pl Bemowo",
+        "lat": 52.260975412948895,
+        "lng": 20.920767832227433
+    },
+    {
+        "name": "Sonik exchange",
+        "lat": 52.22790064881712,
+        "lng": 20.95317490427071
+    },
+    {
+        "name": "Kantor Asia",
+        "lat": 52.22873842579717,
+        "lng": 20.955838441805273
+    },
+    {
+        "name": "LOMBARD KANTOR Wolska 89",
+        "lat": 52.23248618188955,
+        "lng": 20.960445641865064
+    },
+    {
+        "name": "LOMBARD KANTOR GГіrczewska 21",
+        "lat": 52.23782067716708,
+        "lng": 20.96440495441645
+    },
+    {
+        "name": "Monetia Kantor Wola",
+        "lat": 52.23640996391124,
+        "lng": 20.966132654438873
+    },
+    {
+        "name": "Dan Exchange",
+        "lat": 52.234646509286506,
+        "lng": 20.967212466952883
+    },
+    {
+        "name": "Kantor Extrakantor.pl Wola",
+        "lat": 52.23834968307805,
+        "lng": 20.97340339203323
+    },
+    {
+        "name": "Kantor 'Zawisza'",
+        "lat": 52.22644552491019,
+        "lng": 20.98938461724063
+    },
+    {
+        "name": "Skup i SprzedaЕј Walut",
+        "lat": 52.21906567211889,
+        "lng": 20.96418908399932
+    },
+    {
+        "name": "Kantor Banacha Akcent",
+        "lat": 52.20941477891678,
+        "lng": 20.975753327154667
+    },
+    {
+        "name": "LOMBARD KANTOR GrГіjecka 128b",
+        "lat": 52.20423226809045,
+        "lng": 20.969674053263407
+    },
+    {
+        "name": "Kantor wymiany walut Multiserwis",
+        "lat": 52.21345153706988,
+        "lng": 20.952424324817073
+    },
+    {
+        "name": "Ekantor.pl sp. z o.o.",
+        "lat": 52.20841703876784,
+        "lng": 20.943898962754535
+    },
+    {
+        "name": "AirDance Exchange kantor kryptowalutowy, bitcoin, BTC",
+        "lat": 52.18496611484027,
+        "lng": 20.950619610193915
+    },
+    {
+        "name": "Kantor E.Leclerc Jutrzenki",
+        "lat": 52.20200612117929,
+        "lng": 20.935860814999426
+    },
+    {
+        "name": "Kantor wymiany walut",
+        "lat": 52.19790662269729,
+        "lng": 20.885539424530123
+    },
+    {
+        "name": "Kantor Wymiany Walut Galeria UrsynГіw",
+        "lat": 52.14133096535227,
+        "lng": 21.05744507090076
+    },
+    {
+        "name": "Currency Exchange, CH KEN Center",
+        "lat": 52.15394461413744,
+        "lng": 21.04119104728044
+    },
+    {
+        "name": "Max Kantor - Exchange",
+        "lat": 52.15962162724835,
+        "lng": 21.03263796813706
+    },
+    {
+        "name": "Kantor Bitcoin Quark Warszawa",
+        "lat": 52.13019861854377,
+        "lng": 21.061648487810118
+    },
+    {
+        "name": "MONETIA - KANTOR ",
+        "lat": 52.23938951034169,
+        "lng": 21.148541259665457
+    },
+    {
+        "name": "Kantor Ferio",
+        "lat": 52.208440702218184,
+        "lng": 21.167884084562097
+    },
+    {
+        "name": "AiT Borowscy Kantor",
+        "lat": 52.20531357999654,
+        "lng": 21.168749961711086
+    },
+    {
+        "name": "Exchange MAЕЃGORZATA",
+        "lat": 52.30674409428732,
+        "lng": 21.08549688732176
+    }
+]

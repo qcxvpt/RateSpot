@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exchange Screener с Геопозицией</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+
+<!-- Навигация сверху -->
+<header class="top-nav">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" style="height: 40px;" />
+    <h1>Rate Spot</h1>
+  </div>
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li class="nav-item" data-key="navigation">Навигация</li>
+      <li class="nav-item" data-key="partners">Partners</li>
+      <li class="nav-item" data-key="company">Company</li>
+      <li class="nav-item" data-key="compliance">Compliance</li>
+      <li class="nav-item" data-key="knowledge">About us</li>
+      <li class="nav-item"><strong>Crypto Trends 2025</strong></li>
+    </ul>
+    <div class="nav-actions">
+      <select id="languageSelector" class="language-select">
+        <option value="en">EN</option>
+        <option value="ru" selected>RU</option>
+        <option value="pl">PL</option>
+      </select>
+      <button class="contact-button" data-key="contact">CONTACT US</button>
+    </div>
+  </nav>
+</header>
+
+<!-- Основной контент -->
+<main>
+  <div id="leftPanel">
+    <section id="sortSection">
+      <label for="sortField">Сортировать по:</label>
+      <input
+        type="text"
+        id="sortField"
+        placeholder="Введите название обменника"
+        autocomplete="off"
+      />
+    </section>
+
+    <section id="buttonsSection"></section>
+  </div>
+
+  <section id="mapSection">
+    <div id="map" class="resizable-map"></div>
+  </section>
+</main>
+
+<!-- Модальное окно -->
+<div id="introModal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <h2>Добро пожаловать!</h2>
+    <p>Слева — список обменников 📋, справа — карта с геопозицией 📍.</p>
+    <p>Нажмите на обменник — и вы увидите детали и его положение на карте.</p>
+    <button id="closeModal">Понятно</button>
+  </div>
+</div>
+
+<!-- Скрипты -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='api_exchanges.js') }}"></script>
+<script src="{{ url_for('static', filename='bar.js') }}"></script>
+<script src="{{ url_for('static', filename='geolocation.js') }}"></script>
+
+</body>
+</html>

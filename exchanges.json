@@ -3,6 +3,7 @@
         "name": "Kantor 1913 - Warszawa",
         "lat": 52.2309,
         "lng": 21.01453,
+        "url": "https://kantor1913.pl/kursy-warszawa",
         "rates": [
             {
                 "currency": "EUR",
@@ -19,47 +20,56 @@
     {
         "name": "Bitcoin ATM Shitcoins.club",
         "lat": 52.23361191418799,
-        "lng": 21.01003554445016
+        "lng": 21.01003554445016,
+        "url": "https://shitcoins.club/"
     },
     {
         "name": "Kantor Krypto Wymiana Kryptowaluty - Cashify",
         "lat": 52.22117400956089,
-        "lng": 21.015698577818423
+        "lng": 21.015698577818423,
+        "url": "https://www.cashify.eu/"
     },
     {
         "name": "PlasBit Crypto Exchange",
         "lat": 52.18062995095901,
-        "lng": 21.023356378486532
+        "lng": 21.023356378486532,
+        "url": "https://plasbit.com/"
     },
     {
         "name": "Coinswap.pl",
         "lat": 52.23576987038059,
-        "lng": 20.98815867113843
+        "lng": 20.98815867113843,
+        "url": "https://coinswap.pl/"
     },
     {
         "name": "Kantor BITCOIN Warszawa - Hotel Marriott",
         "lat": 52.22776157728751,
-        "lng": 21.003601942301955
+        "lng": 21.003601942301955,
+        "url": "https://www.facebook.com/kantorbitcoinwarszawa/"
     },
     {
         "name": "Kantor Krypto Kotek Warszawa LIM Center",
         "lat": 52.227309635178074,
-        "lng": 21.003721167432634
+        "lng": 21.003721167432634,
+        "url": "https://kryptokotek.pl/bitcoin.html#converter"
     },
     {
         "name": "Kassir obmen - KANTOR KRYPTOWALUT",
         "lat": 52.226994892028415,
-        "lng": 21.01017250443325
+        "lng": 21.01017250443325,
+        "url": "https://www.kassir.pl/pl/"
     },
     {
         "name": "Bitcoinwymiana.pl",
         "lat": 52.23478384350988,
-        "lng": 21.00953861531884
+        "lng": 21.00953861531884,
+        "url": "https://bitcoinwymiana.pl/wymiana-bitcoin-online/"
     },
     {
         "name": "Kantor Bitcoin Warszawa",
         "lat": 52.2351801852045,
-        "lng": 21.009837673401485
+        "lng": 21.009837673401485,
+        "url": "https://www.facebook.com/kantorbitcoinwarszawa/"
     },
     {
         "name": "Kantor X Exchange",

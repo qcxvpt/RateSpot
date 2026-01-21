@@ -88,6 +88,7 @@ header h1 {
   border-bottom: 1px solid #e2e8f0;
 }
 
+
 #sortField {
   padding: 0.5rem;
   border: 1px solid #cbd5e1;
@@ -161,6 +162,54 @@ header h1 {
   display: block;
 }
 
+.rates-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rates-title {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.exchange-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  background-color: #0ea5e9;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  width: fit-content;
+}
+
+.exchange-link:hover {
+  background-color: #0284c7;
+}
+
+.rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.rates-table th,
+.rates-table td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+}
+
+.rates-table th {
+  font-weight: 600;
+  color: #475569;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   header,
@@ -221,42 +270,72 @@ header h1 {
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   color: #000000;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .nav-links li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  min-height: 36px;
+  min-width: 44px;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  white-space: nowrap;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   user-select: none;
 }
 
 .nav-links li:hover {
-  color: #3b82f6;
+  color: #1d4ed8;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.nav-links li:active {
+  transform: translateY(1px);
+}
+
+.nav-links li:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.35);
+  outline-offset: 2px;
 }
 
 .nav-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .language-select {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 0.4rem 0.75rem;
+  padding: 0.45rem 0.75rem;
   font-weight: 600;
   cursor: pointer;
   user-select: none;
+  min-height: 36px;
 }
 
 .contact-button {
@@ -269,28 +348,19 @@ header h1 {
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s ease;
+  min-height: 36px;
 }
 
 .contact-button:hover {
   background-color: #c40811;
 }
 
-/* Адаптив для навигации (по желанию) */
+/* Убираем переносы в верхней панели */
 @media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
+  .nav-container,
+  .nav-links,
   .nav-actions {
-    justify-content: center;
-    gap: 1rem;
+    flex-wrap: nowrap;
   }
 }
 .modal-overlay {
@@ -335,34 +405,7 @@ header h1 {
   background-color: #0056b3;
 }
 
-/* Модальное окно-инструкция */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-box {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  max-width: 400px;
-  text-align: center;
-}
-
-.modal-box h2 {
-  margin-top: 0;
-}
-
-#closeModal {
+#closeContactModal {
   margin-top: 1.5rem;
   background-color: #007bff;
   color: white;
@@ -374,6 +417,37 @@ header h1 {
   transition: background 0.3s;
 }
 
-#closeModal:hover {
+#closeContactModal:hover {
   background-color: #0056b3;
 }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-name {
+  font-weight: 700;
+  color: #1f2d3d;
+}
+
+.contact-email {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+

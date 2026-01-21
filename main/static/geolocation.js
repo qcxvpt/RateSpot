@@ -1,6 +1,7 @@
 // geolocation.js
 
 let userMarker = null;
+let locationErrorShown = false;
 
 function updateUserLocation(position) {
   const { latitude, longitude } = position.coords;
@@ -26,7 +27,10 @@ function updateUserLocation(position) {
 
 function handleLocationError(error) {
   console.error('Ошибка геолокации:', error.message);
-  alert('Не удалось определить ваше местоположение');
+  if (!locationErrorShown) {
+    alert('Не удалось определить ваше местоположение');
+    locationErrorShown = true;
+  }
 }
 
 if (navigator.geolocation) {

@@ -33,7 +33,7 @@
         <option value="ru" selected>RU</option>
         <option value="pl">PL</option>
       </select>
-      <button class="contact-button" data-key="contact">CONTACT US</button>
+      <button class="contact-button" data-key="contact" id="contactButton">CONTACT US</button>
     </div>
   </nav>
 </header>
@@ -66,6 +66,24 @@
     <p>Слева — список обменников 📋, справа — карта с геопозицией 📍.</p>
     <p>Нажмите на обменник — и вы увидите детали и его положение на карте.</p>
     <button id="closeModal">Понятно</button>
+  </div>
+</div>
+
+<!-- Контактное окно -->
+<div id="contactModal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <h2>Связаться с нами</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="contact-name">Антон Балак</span>
+        <a class="contact-email" href="mailto:antonbalack3@gmail.com">antonbalack3@gmail.com</a>
+      </li>
+      <li>
+        <span class="contact-name">Даниил Пивоваров</span>
+        <a class="contact-email" href="mailto:danipivo82@gmail.com">danipivo82@gmail.com</a>
+      </li>
+    </ul>
+    <button id="closeContactModal">Закрыть</button>
   </div>
 </div>
 

@@ -11,10 +11,59 @@ const itemsPerPage = 10;
 let currentPage = 1;
 let highlightedExchangeIndex = null;
 
+function buildRatesHtml(rates, status, url) {
+  const linkHtml = url
+    ? `<a class="exchange-link" href="${url}" target="_blank" rel="noopener noreferrer">Перейти на сайт</a>`
+    : '';
+
+  if (Array.isArray(rates) && rates.length) {
+    const rows = rates
+      .map(rate => `
+        <tr>
+          <td>${rate.currency || ''}</td>
+          <td>${rate.buy || ''}</td>
+          <td>${rate.sell || ''}</td>
+        </tr>
+      `)
+      .join('');
+
+    return `
+      <div class="rates-block">
+        ${linkHtml}
+        <div class="rates-title">Курсы</div>
+        <table class="rates-table">
+          <thead>
+            <tr>
+              <th>Валюта</th>
+              <th>Покупка</th>
+              <th>Продажа</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  if (status === 'needs_api' || status === 'needs_source') {
+    return `${linkHtml}<p>Курсы доступны только через калькулятор/закрытый API.</p>`;
+  }
+
+  return `${linkHtml}<p>Информация о курсе временно недоступна.</p>`;
+}
+
 async function loadData() {
   try {
     const response = await fetch('/api/exchanges');
-    exchangesData = await response.json();
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    exchangesData = Array.isArray(data)
+      ? data.map((exchange, index) => ({ ...exchange, __index: index }))
+      : [];
 
     renderAllMarkers();
     renderExchanges();
@@ -27,12 +76,18 @@ function renderAllMarkers() {
   markers.forEach(marker => map.removeLayer(marker));
   markers.length = 0;
 
-  exchangesData.forEach((exchange, index) => {
-    const marker = L.marker([exchange.lat, exchange.lng])
+  exchangesData.forEach((exchange) => {
+    const lat = Number(exchange.lat);
+    const lng = Number(exchange.lng);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+      return;
+    }
+
+    const marker = L.marker([lat, lng])
       .addTo(map)
       .bindPopup(exchange.name);
 
-    marker.exchangeIndex = index;
+    marker.exchangeIndex = exchange.__index;
 
     marker.on('click', () => {
       const page = Math.floor(marker.exchangeIndex / itemsPerPage) + 1;
@@ -44,7 +99,7 @@ function renderAllMarkers() {
       highlightedExchangeIndex = marker.exchangeIndex;
       renderExchanges();
 
-      map.setView([exchange.lat, exchange.lng], 13);
+      map.setView([lat, lng], 13);
       markers.forEach(m => m.closePopup());
       marker.openPopup();
     });
@@ -59,8 +114,18 @@ function renderExchanges() {
 
   const filterValue = document.getElementById('sortField').value.toLowerCase();
   const filteredData = exchangesData.filter(exchange =>
-    exchange.name.toLowerCase().includes(filterValue)
+    (exchange.name || '').toLowerCase().includes(filterValue)
   );
+
+  if (
+    highlightedExchangeIndex !== null &&
+    !filteredData.some(exchange => exchange.__index === highlightedExchangeIndex)
+  ) {
+    highlightedExchangeIndex = null;
+  }
+
+  const totalPages = Math.max(1, Math.ceil(filteredData.length / itemsPerPage));
+  if (currentPage > totalPages) currentPage = totalPages;
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const pageItems = filteredData.slice(startIndex, startIndex + itemsPerPage);
@@ -69,7 +134,7 @@ function renderExchanges() {
     const button = document.createElement('button');
     button.className = 'exchangeButton';
 
-    const globalIndex = exchangesData.findIndex(e => e === exchange);
+    const globalIndex = exchange.__index;
     button.dataset.index = globalIndex;
 
     // Добавляем стрелочку рядом с названием (по умолчанию — вправо)
@@ -85,7 +150,11 @@ function renderExchanges() {
 
     const exchangeDetails = document.createElement('div');
     exchangeDetails.className = 'exchange-details';
-    exchangeDetails.innerHTML = '<p>Информация о курсе временно недоступна.</p>';
+    exchangeDetails.innerHTML = buildRatesHtml(
+      exchange.rates,
+      exchange.rate_status,
+      exchange.url
+    );
 
     // Клик по кнопке — показываем стрелочку, скрываем у остальных и детали
     button.addEventListener('click', (e) => {
@@ -197,7 +266,6 @@ document.getElementById('sortField').addEventListener('input', () => {
   currentPage = 1;
   highlightedExchangeIndex = null;
   renderExchanges();
-  renderAllMarkers();
 });
 
 function highlightExchangeInList() {

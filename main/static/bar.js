@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("introModal");
   const closeBtn = document.getElementById("closeModal");
   const navButton = document.querySelector('.nav-item[data-key="navigation"]');
+  const contactButton = document.getElementById('contactButton');
+  const contactModal = document.getElementById('contactModal');
+  const closeContactModal = document.getElementById('closeContactModal');
 
   // Переводы
   const translations = {
@@ -71,6 +74,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (navButton) {
     navButton.addEventListener('click', () => {
       modal.style.display = 'flex';
+    });
+  }
+
+  if (contactButton && contactModal && closeContactModal) {
+    contactButton.addEventListener('click', () => {
+      contactModal.style.display = 'flex';
+    });
+
+    closeContactModal.addEventListener('click', () => {
+      contactModal.style.display = 'none';
+    });
+
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        contactModal.style.display = 'none';
+      }
     });
   }
 });
